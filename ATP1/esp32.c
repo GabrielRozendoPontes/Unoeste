@@ -8,16 +8,16 @@
 
 
 const char* ssid = "WIFI_AAPM_CFP914"; //nome da rede wifi
-const char* password =""; //senha da red e wifi
-const char* url_api = "https://niloweb.com.br/transit-room/api/point_consulta.php"; //url endpoint Nilo ir· disponibilizar
+const char* password =""; //senha da rede e wifi
+const char* url_api = "https://niloweb.com.br/transit-room/api/point_consulta.php"; //url endpoint 
 
 //url da API e qual o nome do enpoint que foi criado na API
 //qual o tipo de retorno do endpoint? 
-//Nos precsamos que retorne esses caracteres: VD, VM, AM
+//necess√°rio que retorne esses caracteres: VD, VM, AM
 
 //http://url-da-api/endpoint
 
-//declar os tres pinos
+//declarar os tr√™s pinos
 const int VD = 22;
 const int VM = 19;
 const int AM = 18;
@@ -39,7 +39,7 @@ void setup() {
   digitalWrite(VD, LOW);
   delay(2000);
 
-  //inicializar como saida os tres pinos
+  //inicializar como sa√≠da os tr√™s pinos
 
   while (WiFi.status() != WL_CONNECTED) {  
    digitalWrite(VM, HIGH);
@@ -106,6 +106,6 @@ void loop() {
       }
     }   
   }
-  delay(20000); // esta espera È pra n„o ficar a todo momento requisitando no servidor/endpoint
+  delay(20000); // espera para n√£o ficar a todo momento requisitando no servidor/endpoint
 }
 
